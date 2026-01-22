@@ -1,38 +1,30 @@
 # P1team
 
-🏎️ Autonomous Racing Car Simulation with ROS 2 & Gazebo
+## Autonomous Racing Car Simulation
 
-## Overview
-This project demonstrates a simple autonomous racing system for a small virtual Formula 1-style car. The goal is to simulate self-driving behavior using ROS 2 Humble and the Gazebo simulator, running on a Windows machine via WSL (Windows Subsystem for Linux).
+This project simulates a small Formula 1-style car navigating a virtual track using **ROS 2** and **Gazebo**. The car follows predefined waypoints to drive autonomously, without relying on sensors.  
 
-The car navigates by following a sequence of predefined waypoints—without relying on any sensors.
+### Key Features
+- Python-based ROS 2 nodes for control  
+- Waypoint navigation for self-driving behavior  
+- Speed adjustments for curves to maintain stability  
+- Runs in **Gazebo 11** on Windows via WSL + Ubuntu 22.04  
 
-## Features
-✅ ROS 2 nodes written in Python  
-✅ Basic waypoint navigation  
-✅ Speed adaptation during curves for better stability  
-✅ Simulation environment built with Gazebo 11  
-✅ Runs on Windows using WSL + Ubuntu 22.04  
+### How It Works
+The car calculates its position relative to the next waypoint at each simulation step and adjusts its steering and speed accordingly. Sharp turns trigger automatic speed reduction to keep control.  
 
-## How It Works
-The car follows a list of waypoints, adjusting its direction and speed in real time.  
-
-At every simulation step, the car calculates its position relative to the next waypoint and modifies its steering angle and velocity accordingly.  
-
-Speed is automatically reduced on sharp turns to maintain control and avoid instability.  
-
-## Technologies Used
+### Technology Stack
 - ROS 2 Humble Hawksbill  
 - Gazebo 11  
 - Python 3  
 - Ubuntu 22.04 (via WSL)  
 - Windows 10/11  
 
-## Future Improvements
-- Add LIDAR or camera sensors for perception  
+### Future Improvements
+- Add sensors like LIDAR or camera for environment perception  
 - Implement PID control for smoother motion  
-- Use path planning algorithms (e.g., A*, RRT) for dynamic navigation  
-- Integrate real-time obstacle avoidance
+- Include advanced path planning algorithms (A*, RRT)  
+- Real-time obstacle detection and avoidance  
 
-## Academic Note
-This repository represents my independent submission of a team project.
+### Academic Note
+This repository contains my independent version of a team project for academic submission.
